@@ -247,7 +247,7 @@ public class BuildMojo extends AbstractDockerMojo {
     if (dockerDirectory != null) {
       Path path = Paths.get(dockerDirectory, "Dockerfile");
       if (!path.toFile().exists()) {
-        getLog().info("No Dockerfile in dockerDirectory");
+        getLog().info("No Dockerfile in dockerDirectory: " + dockerDirectory);
         return true;
       }
     }
